@@ -20,6 +20,8 @@ SELECT COALESCE(NULL, NULL, 'C') AS result
 The output will be C
 
 ## BigQuery
+As of 4/16/2015, COALESCE is available in BigQuery.
+https://cloud.google.com/bigquery/docs/reference/standard-sql/functions-and-operators#conditional_expressions
 
 ## PostgregSQL
 
