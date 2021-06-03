@@ -1,3 +1,10 @@
+---
+toc: false
+layout: post
+categories: [sql]
+title: Using sql coalesce function querying data
+---
+
 A Null value is a field with no value.
 
 The Coalesce SQL function returns first non-null expression among its arguments. Null plus anything equals zero and it like zero times anything equals zero. 
