@@ -7,7 +7,7 @@
 # https://learnxinyminutes.com/docs/yaml/
 
 title: Test & Optimize
-description: An easy to use blogging platform with support for Jupyter Notebooks.
+description: personal learning journal on data analytics.
 github_username: mryap
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "probable-lamp"
