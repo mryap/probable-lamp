@@ -1,4 +1,9 @@
-
+---
+toc: false
+layout: post
+categories: [bigquery]
+title: Sample BigQuery sql queries
+---
 What is the average number of transactions per purchaser?
 Calculate the average number of transactions per purchaser for July 2017. 
 
