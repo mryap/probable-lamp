@@ -40,3 +40,7 @@ GROUP BY
 ORDER BY
   total_transactions DESC
 ```
+[Share query URL on BigQuery](https://console.cloud.google.com/bigquery?sq=416461284595:33e0e2cdec00434285d6717f9f555a4b)
+
+
+
