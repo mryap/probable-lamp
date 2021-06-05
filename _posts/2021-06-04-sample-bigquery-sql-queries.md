@@ -8,6 +8,7 @@ title: Sample BigQuery sql queries
 
 The [dataset](https://accounts.google.com/ServiceLogin/signinchooser?service=cloudconsole&passive=1209600&osid=1&continue=https%3A%2F%2Fconsole.cloud.google.com%2Fbigquery%3Fp%3Dbigquery-public-data%26d%3Dgoogle_analytics_sample%26t%3Dga_sessions_20170801%26page%3Dtable%26ref%3Dhttps%3A%2F%2Fconsole.cloud.google.com%2Fmarketplace%2Fproduct%2Fobfuscated-ga360-data%2Fobfuscated-ga360-data%3Fproject%253Dlexical-script-761%2526login%253Dtrue%2526ref%253Dhttps%3A%25252F%25252Fsupport.google.com%25252F&followup=https%3A%2F%2Fconsole.cloud.google.com%2Fbigquery%3Fp%3Dbigquery-public-data%26d%3Dgoogle_analytics_sample%26t%3Dga_sessions_20170801%26page%3Dtable%26ref%3Dhttps%3A%2F%2Fconsole.cloud.google.com%2Fmarketplace%2Fproduct%2Fobfuscated-ga360-data%2Fobfuscated-ga360-data%3Fproject%253Dlexical-script-761%2526login%253Dtrue%2526ref%253Dhttps%3A%25252F%25252Fsupport.google.com%25252F&flowName=GlifWebSignIn&flowEntry=ServiceLogin) provides 12 months (August 2016 to August 2017) of obfuscated Google Analytics 360 data from the Google Merchandise Store, a real ecommerce store that sells Google-branded merchandise, in BigQuery. It’s a great way analyze business data and learn the benefits of using BigQuery to analyze Analytics 360 data 
 
+![]({{site.baseurl}}/images/Screenshot_2021-06-05 SQL workspace – BigQuery – 2021 – Google Cloud Platform.png)
 
 ## Average number of transactions per purchaser for July 2017
 What is the average number of transactions per purchaser?
