@@ -44,6 +44,17 @@
         
     
   
+    
+        ,"post4": {
+            "title": "Title",
+            "content": "library(plotly) set.seed(100) d &lt;- diamonds[sample(nrow(diamonds), 1000), ] plot_ly(d, x = ~carat, y = ~price, color = ~carat, size = ~carat, text = ~paste(&quot;Clarity: &quot;, clarity)) . Loading required package: ggplot2 Attaching package: ‘plotly’ The following object is masked from ‘package:ggplot2’: last_plot The following object is masked from ‘package:stats’: filter The following object is masked from ‘package:graphics’: layout No trace type specified: Based on info supplied, a &#39;scatter&#39; trace seems appropriate. Read more about this trace type -&gt; https://plot.ly/r/reference/#scatter No scatter mode specifed: Setting the mode to markers Read more about this attribute -&gt; https://plot.ly/r/reference/#scatter-mode . &lt;!DOCTYPE html&gt; . .",
+            "url": "https://mryap.github.io/probable-lamp/2018/06/26/Plotly.html",
+            "relUrl": "/2018/06/26/Plotly.html",
+            "date": " • Jun 26, 2018"
+        }
+        
+    
+  
 
   
   
