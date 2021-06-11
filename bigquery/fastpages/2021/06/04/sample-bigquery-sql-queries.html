@@ -7,16 +7,17 @@
 <title>Sample BigQuery sql queries | Test &amp; Optimize</title>
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Sample BigQuery sql queries" />
+<meta name="author" content="Yap Shiao Shyan" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="The dataset provides 12 months (August 2016 to August 2017) of obfuscated Google Analytics 360 data from the Google Merchandise Store, a real ecommerce store that sells Google-branded merchandise, in BigQuery. It’s a great way analyze business data and learn the benefits of using BigQuery to analyze Analytics 360 data" />
 <meta property="og:description" content="The dataset provides 12 months (August 2016 to August 2017) of obfuscated Google Analytics 360 data from the Google Merchandise Store, a real ecommerce store that sells Google-branded merchandise, in BigQuery. It’s a great way analyze business data and learn the benefits of using BigQuery to analyze Analytics 360 data" />
-<link rel="canonical" href="https://mryap.github.io/probable-lamp/bigquery/2021/06/04/sample-bigquery-sql-queries.html" />
-<meta property="og:url" content="https://mryap.github.io/probable-lamp/bigquery/2021/06/04/sample-bigquery-sql-queries.html" />
+<link rel="canonical" href="https://mryap.github.io/probable-lamp/bigquery/fastpages/2021/06/04/sample-bigquery-sql-queries.html" />
+<meta property="og:url" content="https://mryap.github.io/probable-lamp/bigquery/fastpages/2021/06/04/sample-bigquery-sql-queries.html" />
 <meta property="og:site_name" content="Test &amp; Optimize" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-06-04T00:00:00-05:00" />
 <script type="application/ld+json">
-{"url":"https://mryap.github.io/probable-lamp/bigquery/2021/06/04/sample-bigquery-sql-queries.html","@type":"BlogPosting","headline":"Sample BigQuery sql queries","dateModified":"2021-06-04T00:00:00-05:00","datePublished":"2021-06-04T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mryap.github.io/probable-lamp/bigquery/2021/06/04/sample-bigquery-sql-queries.html"},"description":"The dataset provides 12 months (August 2016 to August 2017) of obfuscated Google Analytics 360 data from the Google Merchandise Store, a real ecommerce store that sells Google-branded merchandise, in BigQuery. It’s a great way analyze business data and learn the benefits of using BigQuery to analyze Analytics 360 data","@context":"https://schema.org"}</script>
+{"url":"https://mryap.github.io/probable-lamp/bigquery/fastpages/2021/06/04/sample-bigquery-sql-queries.html","@type":"BlogPosting","headline":"Sample BigQuery sql queries","dateModified":"2021-06-04T00:00:00-05:00","datePublished":"2021-06-04T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mryap.github.io/probable-lamp/bigquery/fastpages/2021/06/04/sample-bigquery-sql-queries.html"},"author":{"@type":"Person","name":"Yap Shiao Shyan"},"description":"The dataset provides 12 months (August 2016 to August 2017) of obfuscated Google Analytics 360 data from the Google Merchandise Store, a real ecommerce store that sells Google-branded merchandise, in BigQuery. It’s a great way analyze business data and learn the benefits of using BigQuery to analyze Analytics 360 data","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/probable-lamp/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://mryap.github.io/probable-lamp/feed.xml" title="Test &amp; Optimize" /><link rel="shortcut icon" type="image/x-icon" href="/probable-lamp/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -89,7 +90,9 @@ window.onload = wrap_img;
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">Sample BigQuery sql queries</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-06-04T00:00:00-05:00" itemprop="datePublished">
         Jun 4, 2021
-      </time>
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Yap Shiao Shyan</span></span>
        • <span class="read-time" title="Estimated read time">
     
     
@@ -101,6 +104,9 @@ window.onload = wrap_img;
       <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
       
         <a class="category-tags-link" href="/probable-lamp/categories/#bigquery">bigquery</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/probable-lamp/categories/#fastpages">fastpages</a>
         
       
       </p>
@@ -109,11 +115,16 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>The <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=cloudconsole&amp;passive=1209600&amp;osid=1&amp;continue=https%3A%2F%2Fconsole.cloud.google.com%2Fbigquery%3Fp%3Dbigquery-public-data%26d%3Dgoogle_analytics_sample%26t%3Dga_sessions_20170801%26page%3Dtable%26ref%3Dhttps%3A%2F%2Fconsole.cloud.google.com%2Fmarketplace%2Fproduct%2Fobfuscated-ga360-data%2Fobfuscated-ga360-data%3Fproject%253Dlexical-script-761%2526login%253Dtrue%2526ref%253Dhttps%3A%25252F%25252Fsupport.google.com%25252F&amp;followup=https%3A%2F%2Fconsole.cloud.google.com%2Fbigquery%3Fp%3Dbigquery-public-data%26d%3Dgoogle_analytics_sample%26t%3Dga_sessions_20170801%26page%3Dtable%26ref%3Dhttps%3A%2F%2Fconsole.cloud.google.com%2Fmarketplace%2Fproduct%2Fobfuscated-ga360-data%2Fobfuscated-ga360-data%3Fproject%253Dlexical-script-761%2526login%253Dtrue%2526ref%253Dhttps%3A%25252F%25252Fsupport.google.com%25252F&amp;flowName=GlifWebSignIn&amp;flowEntry=ServiceLogin">dataset</a> provides 12 months (August 2016 to August 2017) of obfuscated Google Analytics 360 data from the Google Merchandise Store, a real ecommerce store that sells Google-branded merchandise, in BigQuery. It’s a great way analyze business data and learn the benefits of using BigQuery to analyze Analytics 360 data</p>
+    <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#average-number-of-transactions-per-purchaser-for-july-2017">Average number of transactions per purchaser for July 2017</a></li>
+<li class="toc-entry toc-h2"><a href="#total-number-of-transactions-generated-per-device-browser">Total number of transactions generated per device browser</a></li>
+<li class="toc-entry toc-h2"><a href="#find-out-the-first-time-each-customer-visited-the-site">find out the first time each customer visited the site</a></li>
+</ul><p>The <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=cloudconsole&amp;passive=1209600&amp;osid=1&amp;continue=https%3A%2F%2Fconsole.cloud.google.com%2Fbigquery%3Fp%3Dbigquery-public-data%26d%3Dgoogle_analytics_sample%26t%3Dga_sessions_20170801%26page%3Dtable%26ref%3Dhttps%3A%2F%2Fconsole.cloud.google.com%2Fmarketplace%2Fproduct%2Fobfuscated-ga360-data%2Fobfuscated-ga360-data%3Fproject%253Dlexical-script-761%2526login%253Dtrue%2526ref%253Dhttps%3A%25252F%25252Fsupport.google.com%25252F&amp;followup=https%3A%2F%2Fconsole.cloud.google.com%2Fbigquery%3Fp%3Dbigquery-public-data%26d%3Dgoogle_analytics_sample%26t%3Dga_sessions_20170801%26page%3Dtable%26ref%3Dhttps%3A%2F%2Fconsole.cloud.google.com%2Fmarketplace%2Fproduct%2Fobfuscated-ga360-data%2Fobfuscated-ga360-data%3Fproject%253Dlexical-script-761%2526login%253Dtrue%2526ref%253Dhttps%3A%25252F%25252Fsupport.google.com%25252F&amp;flowName=GlifWebSignIn&amp;flowEntry=ServiceLogin">dataset</a> provides 12 months (August 2016 to August 2017) of obfuscated Google Analytics 360 data from the Google Merchandise Store, a real ecommerce store that sells Google-branded merchandise, in BigQuery. It’s a great way analyze business data and learn the benefits of using BigQuery to analyze Analytics 360 data</p>
 
-<p><img src="/probable-lamp/images/Screenshot_2021-06-05 SQL workspace – BigQuery – 2021 – Google Cloud Platform.png" alt="" /></p>
+<p><img src="/probable-lamp/images/Screenshot_2021-06-05%20SQL%20workspace%20%E2%80%93%20BigQuery%20%E2%80%93%202021%20%E2%80%93%20Google%20Cloud%20Platform.png" alt=""></p>
 
-<h2 id="average-number-of-transactions-per-purchaser-for-july-2017">Average number of transactions per purchaser for July 2017</h2>
+<h2 id="average-number-of-transactions-per-purchaser-for-july-2017">
+<a class="anchor" href="#average-number-of-transactions-per-purchaser-for-july-2017" aria-hidden="true"><span class="octicon octicon-link"></span></a>Average number of transactions per purchaser for July 2017</h2>
 <p>What is the average number of transactions per purchaser?
 Calculate the average number of transactions per purchaser for July 2017.</p>
 
@@ -132,7 +143,8 @@ FROM (
   GROUP BY
     fullVisitorId )
 </code></pre></div></div>
-<h2 id="total-number-of-transactions-generated-per-device-browser">Total number of transactions generated per device browser</h2>
+<h2 id="total-number-of-transactions-generated-per-device-browser">
+<a class="anchor" href="#total-number-of-transactions-generated-per-device-browser" aria-hidden="true"><span class="octicon octicon-link"></span></a>Total number of transactions generated per device browser</h2>
 <p>What is the total number of transactions generated per device browser?
 Identify the top 5 browsers used for making transactions in July 2017, listed in descending order by total transactions.</p>
 
@@ -151,7 +163,8 @@ ORDER BY
 </code></pre></div></div>
 <p><a href="https://console.cloud.google.com/bigquery?sq=416461284595:33e0e2cdec00434285d6717f9f555a4b">Share query URL on BigQuery</a></p>
 
-<h2 id="find-out-the-first-time-each-customer-visited-the-site">find out the first time each customer visited the site</h2>
+<h2 id="find-out-the-first-time-each-customer-visited-the-site">
+<a class="anchor" href="#find-out-the-first-time-each-customer-visited-the-site" aria-hidden="true"><span class="octicon octicon-link"></span></a>find out the first time each customer visited the site</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>select
   extract(date from timestamp_seconds(min(visitStartTime))) as cohort_month,
   fullVisitorId
@@ -161,7 +174,7 @@ group by fullVisitorId
 <p><a href="https://console.cloud.google.com/bigquery?sq=416461284595:dcdee4c6233848018c8c33d0f2f57822">Share query URL on BigQuery</a></p>
 
 
-  </div><a class="u-url" href="/probable-lamp/bigquery/2021/06/04/sample-bigquery-sql-queries.html" hidden></a>
+  </div><a class="u-url" href="/probable-lamp/bigquery/fastpages/2021/06/04/sample-bigquery-sql-queries.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
