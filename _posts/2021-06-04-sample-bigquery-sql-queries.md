@@ -3,7 +3,7 @@ toc:true- branch: master- badges: true- comments: true
 layout: post
 categories: [bigquery, fastpages]
 title: Sample BigQuery sql queries
-- author: Hamel Husain & Jeremy Howard
+author: Yap Shiao Shyan
 ---
 
 
