@@ -1,5 +1,5 @@
 ---
-toc:true- branch: master- badges: true- comments: true
+toc: true- branch: master- badges: true- comments: true
 layout: post
 description: A minimal example of using markdown with fastpages.
 categories: [markdown]
