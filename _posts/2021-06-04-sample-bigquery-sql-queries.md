@@ -1,5 +1,5 @@
 ---
-toc: true- branch: master- badges: true- comments: true
+toc: true
 layout: post
 categories: [bigquery, fastpages]
 title: Sample BigQuery sql queries
