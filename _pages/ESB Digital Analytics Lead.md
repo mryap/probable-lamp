@@ -1,5 +1,4 @@
-# ESB Digital Analytics Lead 
-### Not viewable on the website
+# ESB Digital Analytics Lead
 
 **Position Description**
 
