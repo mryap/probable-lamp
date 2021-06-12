@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Check Dataset Existence Bigquery",
-            "content": "`` from google.cloud import bigquery from google.cloud.exceptions import NotFound . client = bigquery.Client() . TODO(developer): Set dataset_id to the ID of the dataset to determine existence. . dataset_id = “your-project.your_dataset” . try: client.get_dataset(dataset_id) # Make an API request. print(“Dataset {} already exists”.format(dataset_id)) except NotFound: print(“Dataset {} is not found”.format(dataset_id)) `` .",
-            "url": "https://mryap.github.io/probable-lamp/2021/06/12/check-dataset-existence-bigquery.html",
-            "relUrl": "/2021/06/12/check-dataset-existence-bigquery.html",
+            "title": "Check dataset existence in Bigquery with Python",
+            "content": "from google.cloud import bigquery from google.cloud.exceptions import NotFound client = bigquery.Client() # TODO(developer): Set dataset_id to the ID of the dataset to determine existence. # dataset_id = &quot;your-project.your_dataset&quot; try: client.get_dataset(dataset_id) # Make an API request. print(&quot;Dataset {} already exists&quot;.format(dataset_id)) except NotFound: print(&quot;Dataset {} is not found&quot;.format(dataset_id)) .",
+            "url": "https://mryap.github.io/probable-lamp/bigquery/python/2021/06/12/check-dataset-existence-bigquery.html",
+            "relUrl": "/bigquery/python/2021/06/12/check-dataset-existence-bigquery.html",
             "date": " • Jun 12, 2021"
         }
         
