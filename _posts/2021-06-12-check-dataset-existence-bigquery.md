@@ -1,4 +1,10 @@
-``
+---
+toc: false
+layout: post
+categories: [bigquery, python]
+title: Check dataset existence in Bigquery with Python
+---
+```
 from google.cloud import bigquery
 from google.cloud.exceptions import NotFound
 
@@ -12,4 +18,4 @@ try:
     print("Dataset {} already exists".format(dataset_id))
 except NotFound:
     print("Dataset {} is not found".format(dataset_id))
-``
+```
