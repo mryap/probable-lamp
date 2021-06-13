@@ -5,7 +5,14 @@ permalink: /about/
 ---
 
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+
+This site is an offshoot of [Test & Optimize](https://www.testandoptimize.com/). It is a collection of TIL (Today I learned) notes. 
+
+A write-ups on small things I learn daily from involving in side projects to work across a variety of languages and technologies. 
+These are things that don't really warrant a full blog post.
+
+This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1]. From hosting, version control to generating webpages, all is done on GitHub
+
 
 ![]({{site.baseurl}}/images/diagram.png "https://github.com/fastai/fastpages")
 
