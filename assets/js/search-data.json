@@ -73,7 +73,7 @@
   
       ,"page1": {
           "title": "About Test & Optimize",
-          "content": "This website is powered by fastpages 1. . . fastpages automates the process of creating blog posts via GitHub Actions, so you don’t have to fuss with conversion scripts. A full list of features can be found on GitHub. . An easy to use blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
+          "content": "This site is an offshoot of Test &amp; Optimize. It is a collection of TIL (Today I learned) notes. . A write-ups on small things I learn daily from involving in side projects to work across a variety of languages and technologies. These are things that don’t really warrant a full blog post. . This website is powered by fastpages 1. From hosting, version control to generating webpages, all is done on GitHub . . fastpages automates the process of creating blog posts via GitHub Actions, so you don’t have to fuss with conversion scripts. A full list of features can be found on GitHub. . An easy to use blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
           "url": "https://mryap.github.io/probable-lamp/about/",
           "relUrl": "/about/",
           "date": ""
