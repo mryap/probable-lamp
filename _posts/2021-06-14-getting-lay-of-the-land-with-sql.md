@@ -22,7 +22,7 @@ Note that data tables in BigQuery are template-suffix based. i.e. `bigquery-publ
 
 ![]({{site.baseurl}}/images/Screenshot_2021-06-14 SQL workspace – BigQuery – Cohort Analysis – Google Cloud Platform.png)
 
-[A sql qeury link you can access to](
+[A sql query link you can access here within BigQuery](
 https://console.cloud.google.com/bigquery?sq=948256378521:df2fcf4476e24af78b7bfd619370349d
 )
 
