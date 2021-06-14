@@ -1,9 +1,11 @@
-<p>SQL is becoming a common skill requirement across industries.</p>
+<p>Imagine you given access to a huge dataset containing many tables in BigQuery</p>
+<ul>
+  <li>How do you identify which tables are the most updated?</li>
+  <li>When was each table created?</li>
+  <li>What columns are present in each table?</li>
+</ul>
 
-<p>Employers require their data analysts, data scientists and product managers (or anyone handling data) to at least be familiar with SQL. 
-This is because SQL remains the language of data. So, in order to be data driven, people need to know how to access and analyze data.</p>
-
-<p>One way to handle data is ‘point and click’. For that to happen, Jira ticket need to be raised to seek developer resources to build the user interface layer on top of the datasets. There is a faster way if you have access to BigQuery and know your way around with sql.</p>
+<p>All of these questions can be answered with metadata.</p>
 
 <p>Even if there is a detail documentation, I always wants to get a lay of the land like</p>
 
@@ -31,13 +33,4 @@ WHERE starts_with(table_id, 'github')
 <p>A term for what I am doing is known as Querying table metadata in Google BigQuery</p>
 
 <p>When it comes to query table metadata, there are many potential solutions, ranging from simple view in Google Cloud Console to more Python’s <a href="https://mryap.github.io/probable-lamp/bigquery/python/2021/06/12/check-dataset-existence-bigquery.html">client libraries</a>.</p>
-
-<p>Imagine you given access to a huge dataset containing many tables in BigQuery</p>
-<ul>
-  <li>How do you identify which tables are the most updated?</li>
-  <li>When was each table created?</li>
-  <li>What columns are present in each table?</li>
-</ul>
-
-<p>All of these questions can be answered with metadata.</p>
 
