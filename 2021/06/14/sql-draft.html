@@ -1,0 +1,41 @@
+<p>SQL is becoming a common skill requirement across industries.</p>
+
+<p>Employers require their data analysts, data scientists and product managers (or anyone handling data) to at least be familiar with SQL. 
+This is because SQL remains the language of data. So, in order to be data driven, people need to know how to access and analyze data.</p>
+
+<p>One way to handle data is ‘point and click’. For that to happen, Jira ticket need to be raised to seek developer resources to build the user interface layer on top of the datasets.</p>
+
+<p>Even if there is a detail documentation, I always wants to get a lay of the land like</p>
+
+<ul>
+  <li>list tables in bigquery dataset with sql</li>
+</ul>
+
+<p>Such as</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT * 
+FROM publicdata.samples.__TABLES__
+WHERE starts_with(table_id, 'github') 
+</code></pre></div></div>
+<p>Note that data tables in BigQuery are template-suffix based. i.e. <code class="language-plaintext highlighter-rouge">bigquery-public-data.bbc_news.fulltext</code></p>
+
+<ul>
+  <li>How large are the tables within a given dataset?</li>
+</ul>
+
+<p><img src="`images/Screenshot_2021-06-14 SQL workspace – BigQuery – Cohort Analysis – Google Cloud Platform.png`" alt="" />
+<img src="`/images/Screenshot_2021-06-14 SQL workspace – BigQuery – Cohort Analysis – Google Cloud Platform.png`" alt="" /></p>
+
+<p>WITH question_answers_join AS (
+  SELECT *
+    , GREATEST(1, TIMESTAMP_DIFF(answers.first, creation_date, minute)) minutes_2_answer
+  FROM (
+    SELECT id, creation_date, title
+      , (SELECT AS STRUCT MIN(creation_date) first, COUNT(*) c
+         FROM <code class="language-plaintext highlighter-rouge">bigquery-public-data.stackoverflow.posts_answers</code> 
+         WHERE a.id=parent_id
+      ) answers
+      , SPLIT(tags, ‘|’) tags
+    FROM <code class="language-plaintext highlighter-rouge">bigquery-public-data.stackoverflow.posts_questions</code> a
+    WHERE EXTRACT(year FROM creation_date) &gt; 2016
+  )
+)</p>
