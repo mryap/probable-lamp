@@ -30,6 +30,6 @@ https://console.cloud.google.com/bigquery?sq=948256378521:df2fcf4476e24af78b7bfd
 
 A term for what I am doing is known as Querying table metadata in Google BigQuery
 
-When it comes to query table metadata, there are many potential solutions, ranging from simple view in Google Cloud Console to more Python's [client libraries](https://mryap.github.io/probable-lamp/bigquery/python/2021/06/12/check-dataset-existence-bigquery.html).  
+When it comes to query table metadata, there are many potential solutions, ranging from simple view in Google Cloud Console to more involved's Python [client libraries](https://mryap.github.io/probable-lamp/bigquery/python/2021/06/12/check-dataset-existence-bigquery.html).  
 
 
