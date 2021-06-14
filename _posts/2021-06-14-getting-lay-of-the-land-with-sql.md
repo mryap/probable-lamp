@@ -19,22 +19,6 @@ Note that data tables in BigQuery are template-suffix based. i.e. `bigquery-publ
 
 - How large are the tables within a given dataset?
 
-![](`images/Screenshot_2021-06-14 SQL workspace – BigQuery – Cohort Analysis – Google Cloud Platform.png`)
-![](/images/Screenshot_2021-06-14 SQL workspace – BigQuery – Cohort Analysis – Google Cloud Platform.png)
+
 ![]({{site.baseurl}}/images/Screenshot_2021-06-14 SQL workspace – BigQuery – Cohort Analysis – Google Cloud Platform.png)
 
-
-WITH question_answers_join AS (
-  SELECT *
-    , GREATEST(1, TIMESTAMP_DIFF(answers.first, creation_date, minute)) minutes_2_answer
-  FROM (
-    SELECT id, creation_date, title
-      , (SELECT AS STRUCT MIN(creation_date) first, COUNT(*) c
-         FROM `bigquery-public-data.stackoverflow.posts_answers` 
-         WHERE a.id=parent_id
-      ) answers
-      , SPLIT(tags, '|') tags
-    FROM `bigquery-public-data.stackoverflow.posts_questions` a
-    WHERE EXTRACT(year FROM creation_date) > 2016
-  )
-)
