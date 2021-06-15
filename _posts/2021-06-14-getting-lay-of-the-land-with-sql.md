@@ -26,7 +26,7 @@ Note that data tables in BigQuery are template-suffix based. i.e. `bigquery-publ
 https://console.cloud.google.com/bigquery?sq=948256378521:df2fcf4476e24af78b7bfd619370349d
 )
 
-### Querying table metadata in Google BigQuery?
+### Querying table metadata in Google BigQuery
 
 A term for what I am doing is known as Querying table metadata in Google BigQuery
 
